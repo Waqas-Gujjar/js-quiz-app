@@ -94,10 +94,11 @@ const option2 = document.getElementById('option-2');
 const option3 = document.getElementById('option-3');
 const option4 = document.getElementById('option-4');
 const submitBtn = document.getElementById('submit');
+const timerDisplay = document.getElementById('timer');
 
 // Load the current quiz question
 function loadQuiz() {
-    clearInterval(timer);
+    clearInterval(timer); // Clear any existing timer
     deselectAnswers();
 
     const currentQuizData = quizData[currentQuiz];
@@ -146,7 +147,7 @@ function updateTimer() {
 function submitAnswer() {
     const answer = getSelected();
 
-    if (answer === quizData[currentQuiz].correct) {
+    if (answer && answer === quizData[currentQuiz].correct) {
         score++;
     }
 
@@ -174,12 +175,24 @@ function submitAnswer() {
         reloadBtn.style.cursor = 'pointer';
         reloadBtn.style.marginTop = '20px';
 
-            // Apply flexbox centering to the button container
-            const btnContainer = document.querySelector('.btn-container');
-            btnContainer.style.display = 'flex';
-            btnContainer.style.justifyContent = 'center';
-            btnContainer.style.marginTop = '20px';
-        }
+        // Apply flexbox centering to the button container
+        const btnContainer = document.querySelector('.btn-container');
+        btnContainer.style.display = 'flex';
+        btnContainer.style.justifyContent = 'center';
+        btnContainer.style.marginTop = '20px';
+    }
+}
+
+// Load the first question
+loadQuiz();
+
+// Event listener for the submit button
+submitBtn.addEventListener('click', () => {
+    // Check if an answer is selected before submitting
+    const answer = getSelected();
+    if (answer) {
+        clearInterval(timer);
+        submitAnswer();
     } else {
         alert('Please select an answer before submitting!');
     }
