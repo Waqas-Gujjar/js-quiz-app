@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 155, 167);
+    min-height: 100vh; /* Ensure body covers full height */
+    padding: 20px;
+}
+
+.quiz-app {
+    transform: translate(20px, 10%);
+    width: 40%;
+    height: auto; /* Adjust height for content */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 50px 50px 0px rgba(15, 14, 14, 0.711);
+}
+
+h1 {
+    background-color: blueviolet;
+    text-align: center;
+    padding: 10px; /* Adjust padding for better visuals */
+    color: white;
+    border-radius: 10px 10px 0 0;
+    text-decoration: solid;
+}
+
+h2 {
+    font-size: 24px; /* Adjusted for better visibility on smaller screens */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+ul > li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.btn > button {
+    background-color: blueviolet;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem; /* Adjusted for better visuals */
+    border-radius: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .quiz-app {
+        width: 60%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .quiz-app {
+        width: 80%;
+        transform: translate(0, 0); /* Remove translation for better centering */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size */
+        padding: 8px; /* Adjust padding for better visuals */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .btn {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Space between buttons */
+    }
+
+    .btn > button {
+        font-size: 1.2rem; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-app {
+        width: 100%;
+        height: auto; /* Make height adaptive */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Further adjust heading size */
+        padding: 6px; /* Adjust padding for better visuals */
+    }
+
+    h2 {
+        font-size: 18px; /* Further adjust font size */
+    }
+
+    ul > li {
+        padding: 8px; /* Reduce padding for list items */
+        margin-bottom: 8px; /* Reduce margin for list items */
+    }
+
+    .btn > button {
+        font-size: 1rem; /* Further adjust button font size */
+        padding: 6px 12px; /* Further adjust button padding */
+    }
+}
