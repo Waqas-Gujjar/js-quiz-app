@@ -10,35 +10,39 @@
     <div class="quiz-app">
         <div id="quiz">
             <h1>QUIZ APP</h1>
-       
-            <h2 class="question" id="question" > quiz app</h2>
+            
+            <!-- Score Display -->
+            <h3 id="score-display">Score: 0</h3>
+            
+            <!-- Timer Display -->
+            <h3 id="timer-display">Time Left: 10s</h3>
+
+            <h2 class="question" id="question"></h2>
             
             <ul>
-                <li> <input type="radio" name="answer"  class="answer" id="a">
-                <label for="a" id="option-1">quiz option</label>
-            </li>
-                <li> <input type="radio" name="answer"  class="answer" id="b">
-                <label for="a" id="option-2">quiz option</label>
-            </li>
-                <li> <input type="radio" name="answer"  class="answer" id="c">
-                <label for="a" id="option-3">quiz option</label>
-            </li>
-                <li> <input type="radio" name="answer"  class="answer" id="d">
-                <label for="a" id="option-4">quiz option</label>
-            </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="a">
+                    <label for="a" id="option-1"></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="b">
+                    <label for="b" id="option-2"></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="c">
+                    <label for="c" id="option-3"></label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" class="answer" id="d">
+                    <label for="d" id="option-4"></label>
+                </li>
             </ul>
             
             <div class="btn">
-            <button type="submit" id="submit">Submit</button>
+                <button type="submit" id="submit">Submit</button>
             </div>
         </div>
-       
-
-                
-            </div>
-        </form>
     </div>
-
 
     <script src="script.js"></script>
 </body>
