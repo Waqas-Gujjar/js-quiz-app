@@ -1,87 +1,3 @@
-// Array of quiz questions
-const quizData = [
-    {
-        question: "What is the largest planet in our solar system?",
-        a: "Earth",
-        b: "Jupiter",
-        c: "Saturn",
-        d: "Mars",
-        correct: "b"
-    },
-    {
-        question: "Which element has the chemical symbol 'O'?",
-        a: "Gold",
-        b: "Oxygen",
-        c: "Osmium",
-        d: "Oganesson",
-        correct: "b"
-    },
-    {
-        question: "Who wrote the play 'Romeo and Juliet'?",
-        a: "William Shakespeare",
-        b: "Charles Dickens",
-        c: "Jane Austen",
-        d: "Mark Twain",
-        correct: "a"
-    },
-    {
-        question: "Which country won the FIFA World Cup in 2018?",
-        a: "Germany",
-        b: "Brazil",
-        c: "France",
-        d: "Argentina",
-        correct: "c"
-    },
-    {
-        question: "What is the hardest natural substance on Earth?",
-        a: "Gold",
-        b: "Iron",
-        c: "Diamond",
-        d: "Graphite",
-        correct: "c"
-    },
-    {
-        question: "Who painted the Mona Lisa?",
-        a: "Vincent van Gogh",
-        b: "Pablo Picasso",
-        c: "Claude Monet",
-        d: "Leonardo da Vinci",
-        correct: "d"
-    },
-    {
-        question: "What is the capital city of Australia?",
-        a: "Sydney",
-        b: "Melbourne",
-        c: "Canberra",
-        d: "Perth",
-        correct: "c"
-    },
-    {
-        question: "What is the main ingredient in traditional Japanese miso soup?",
-        a: "Tofu",
-        b: "Soybean paste",
-        c: "Fish stock",
-        d: "Seaweed",
-        correct: "b"
-    },
-    {
-        question: "Who developed the theory of general relativity?",
-        a: "Isaac Newton",
-        b: "Albert Einstein",
-        c: "Galileo Galilei",
-        d: "Nikola Tesla",
-        correct: "b"
-    },
-    {
-        question: "Which year did the Titanic sink?",
-        a: "1912",
-        b: "1905",
-        c: "1898",
-        d: "1921",
-        correct: "a"
-    }
-];
-
 let currentQuiz = 0;
 let score = 0;
 
@@ -92,6 +8,7 @@ const option2 = document.getElementById('option-2');
 const option3 = document.getElementById('option-3');
 const option4 = document.getElementById('option-4');
 const submitBtn = document.getElementById('submit');
+const scoreDisplay = document.getElementById('score-display');
 
 // Load the current quiz question
 function loadQuiz() {
@@ -164,6 +81,9 @@ submitBtn.addEventListener('click', () => {
             btnContainer.style.justifyContent = 'center';
             btnContainer.style.marginTop = '20px';
         }
+
+        // Update score display
+        scoreDisplay.innerText = `Score: ${score}`;
     } else {
         alert('Please select an answer before submitting!');
     }
